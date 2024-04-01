@@ -6,9 +6,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 class SideSection extends StatelessWidget {
   final Function(int index) onTap;
+  final bool isExpanded;
   const SideSection({
     super.key,
     required this.onTap,
+    required this.isExpanded,
   });
 
   @override
@@ -256,6 +258,50 @@ class SideSection extends StatelessWidget {
                     ),
                   ),
                 ),
+                const SizedBox(height: 16),
+                if (isExpanded)
+                  Card(
+                    color: const Color(0xFF2C303A),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
+                      side: const BorderSide(
+                        color: Colors.white,
+                        width: 2,
+                      ),
+                    ),
+                    margin: EdgeInsets.zero,
+                    child: InkWell(
+                      onTap: () => onTap(3),
+                      borderRadius: BorderRadius.circular(16),
+                      child: const Padding(
+                        padding: EdgeInsets.all(24),
+                        child: SizedBox(
+                          width: 80,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              // ICON
+                              FaIcon(
+                                FontAwesomeIcons.arrowLeft,
+                                color: Colors.white,
+                              ),
+                              SizedBox(height: 16),
+                              // TITLE
+                              Text(
+                                'Back',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
               ],
             ),
           ),

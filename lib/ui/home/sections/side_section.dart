@@ -40,7 +40,7 @@ class SideSection extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(24),
                   child: Image.asset(
-                    "/images/profile.JPG",
+                    "assets/images/profile.JPG",
                     fit: BoxFit.cover,
                     width: max(MediaQuery.of(context).size.width * 0.15, 250),
                     height: max(MediaQuery.of(context).size.width * 0.15, 250),
@@ -140,7 +140,7 @@ class SideSection extends StatelessWidget {
                         // BUTTON FOR DOWNLOAD CV
                         ElevatedButton(
                           onPressed: () {
-                            html.AnchorElement anchorElement = html.AnchorElement(href: '/assets/files/cv.pdf');
+                            html.AnchorElement anchorElement = html.AnchorElement(href: 'assets/files/cv.pdf');
                             anchorElement.download = 'pahnal_cv.pdf';
                             anchorElement.click();
                           },

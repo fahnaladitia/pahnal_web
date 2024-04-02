@@ -216,7 +216,7 @@ class _CvSectionState extends State<CvSection> {
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(
-                        '/images/umkt.png',
+                        'assets/images/umkt.png',
                       ),
                       fit: BoxFit.contain,
                     ),

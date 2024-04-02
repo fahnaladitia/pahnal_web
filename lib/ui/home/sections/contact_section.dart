@@ -8,10 +8,16 @@ class ContactSection extends StatelessWidget {
     return Container(
       height: MediaQuery.of(context).size.height,
       color: const Color(0xFF343849),
-      // child: Column(
-      //   mainAxisSize: MainAxisSize.min,
-      //   children: [],
-      // ),
+      child: Center(
+        // UNDER CONSTRUCTION
+        child: Text(
+          'UNDER CONSTRUCTION 🚧',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 24,
+          ),
+        ),
+      ),
     );
   }
 }

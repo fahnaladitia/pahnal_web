@@ -1,16 +1,20 @@
 import 'dart:math';
+import 'dart:html' as html;
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class SideSection extends StatelessWidget {
   final Function(int index) onTap;
   final bool isExpanded;
+  final int currentIndex;
   const SideSection({
     super.key,
     required this.onTap,
     required this.isExpanded,
+    required this.currentIndex,
   });
 
   @override
@@ -85,7 +89,9 @@ class SideSection extends StatelessWidget {
                           children: [
                             // LINKEDIN
                             IconButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                launchUrlString("https://www.linkedin.com/in/pahnaladitia/");
+                              },
                               hoverColor: Colors.blueAccent,
                               color: Colors.white,
                               icon: const FaIcon(
@@ -95,7 +101,9 @@ class SideSection extends StatelessWidget {
                             const SizedBox(width: 16),
                             // GITHUB
                             IconButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                launchUrlString("https://github.com/fahnaladitia");
+                              },
                               hoverColor: Colors.blueAccent,
                               color: Colors.white,
                               icon: const FaIcon(
@@ -105,14 +113,58 @@ class SideSection extends StatelessWidget {
                             // INSTAGRAM
                             const SizedBox(width: 16),
                             IconButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                launchUrlString("https://www.instagram.com/fahnaladitia07/");
+                              },
                               color: Colors.white,
                               hoverColor: Colors.blueAccent,
                               icon: const FaIcon(
                                 FontAwesomeIcons.instagram,
                               ),
                             ),
+                            // EMAIL
+                            const SizedBox(width: 16),
+                            IconButton(
+                              onPressed: () {
+                                launchUrlString("mailto:fahnaladitia07@gmail.com");
+                              },
+                              color: Colors.white,
+                              hoverColor: Colors.blueAccent,
+                              icon: const FaIcon(
+                                FontAwesomeIcons.envelope,
+                              ),
+                            ),
                           ],
+                        ),
+                        const SizedBox(height: 16),
+                        // BUTTON FOR DOWNLOAD CV
+                        ElevatedButton(
+                          onPressed: () {
+                            html.AnchorElement anchorElement = html.AnchorElement(href: '/assets/files/cv.pdf');
+                            anchorElement.download = 'pahnal_cv.pdf';
+                            anchorElement.click();
+                          },
+                          style: ElevatedButton.styleFrom(
+                            foregroundColor: Colors.white,
+                            backgroundColor: const Color(0xFF2C303A),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                              side: const BorderSide(
+                                color: Colors.white,
+                                width: 2,
+                              ),
+                            ),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8),
+                            child: Text(
+                              "Download CV",
+                              style: GoogleFonts.roboto(
+                                fontSize: 16,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
                         ),
                       ],
                     ),
@@ -129,7 +181,10 @@ class SideSection extends StatelessWidget {
               children: [
                 // ABOUT SECTION
                 Card(
-                  color: const Color(0xFF2C303A),
+                  // color: const Color(0xFF2C303A),
+                  color: currentIndex == 0 && isExpanded
+                      ? const Color.fromARGB(255, 119, 127, 165)
+                      : const Color(0xFF2C303A),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
                     side: const BorderSide(
@@ -173,7 +228,9 @@ class SideSection extends StatelessWidget {
                 const SizedBox(height: 16),
                 // PORTFOLIO SECTION
                 Card(
-                  color: const Color(0xFF2C303A),
+                  color: currentIndex == 1 && isExpanded
+                      ? const Color.fromARGB(255, 119, 127, 165)
+                      : const Color(0xFF2C303A),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
                     side: const BorderSide(
@@ -216,48 +273,50 @@ class SideSection extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 // CONTACT SECTION
-                Card(
-                  color: const Color(0xFF2C303A),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                    side: const BorderSide(
-                      color: Colors.white,
-                      width: 2,
-                    ),
-                  ),
-                  margin: EdgeInsets.zero,
-                  child: InkWell(
-                    onTap: () => onTap(2),
-                    borderRadius: BorderRadius.circular(16),
-                    child: const Padding(
-                      padding: EdgeInsets.all(24),
-                      child: SizedBox(
-                        width: 80,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            // ICON
-                            FaIcon(
-                              FontAwesomeIcons.addressBook,
-                              color: Colors.white,
-                            ),
-                            SizedBox(height: 16),
-                            // TITLE
-                            Text(
-                              'Contact',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                // Card(
+                //   color: currentIndex == 2 && isExpanded
+                //       ? const Color.fromARGB(255, 119, 127, 165)
+                //       : const Color(0xFF2C303A),
+                //   shape: RoundedRectangleBorder(
+                //     borderRadius: BorderRadius.circular(16),
+                //     side: const BorderSide(
+                //       color: Colors.white,
+                //       width: 2,
+                //     ),
+                //   ),
+                //   margin: EdgeInsets.zero,
+                //   child: InkWell(
+                //     onTap: () => onTap(2),
+                //     borderRadius: BorderRadius.circular(16),
+                //     child: const Padding(
+                //       padding: EdgeInsets.all(24),
+                //       child: SizedBox(
+                //         width: 80,
+                //         child: Column(
+                //           mainAxisAlignment: MainAxisAlignment.center,
+                //           mainAxisSize: MainAxisSize.min,
+                //           children: [
+                //             // ICON
+                //             FaIcon(
+                //               FontAwesomeIcons.addressBook,
+                //               color: Colors.white,
+                //             ),
+                //             SizedBox(height: 16),
+                //             // TITLE
+                //             Text(
+                //               'Contact',
+                //               style: TextStyle(
+                //                 color: Colors.white,
+                //                 fontSize: 18,
+                //                 fontWeight: FontWeight.bold,
+                //               ),
+                //             ),
+                //           ],
+                //         ),
+                //       ),
+                //     ),
+                //   ),
+                // ),
                 const SizedBox(height: 16),
                 if (isExpanded)
                   Card(

@@ -172,22 +172,21 @@ class _CvPageState extends State<CvPage> {
                         // DESCRIPTION
                         const Text(
                           '''
-          • Designing, developing, and releasing the Swing application for Android and iOS platforms using Flutter SDK.
-          • Implementing key features such as Tee Time booking and GPS integration for the driving range location for golf players.
-          • Collaborating with the UI/UX team in developing an intuitive and engaging user interface.
-          • Integrating a payment system to facilitate booking payments.
-          • Optimizing the application's performance and responsiveness to provide a seamless user experience across various devices.
-          • Conducting regular debugging, testing, and bug fixes to ensure application stability.
-          • Staying up-to-date with the latest practices in Flutter development to meet evolving industry demands.
-          • Contributing as a team member in development projects.
-          • Participating in code reviews and providing constructive feedback to improve code quality.
-          • Collaborating with the backend team to integrate the application with the server-side.''',
+• Designing, developing, and releasing the Swing application for Android and iOS platforms using Flutter SDK.
+• Implementing key features such as Tee Time booking and GPS integration for the driving range location for golf players.
+• Collaborating with the UI/UX team in developing an intuitive and engaging user interface.
+• Integrating a payment system to facilitate booking payments.
+• Optimizing the application's performance and responsiveness to provide a seamless user experience across various devices.
+• Conducting regular debugging, testing, and bug fixes to ensure application stability.
+• Staying up-to-date with the latest practices in Flutter development to meet evolving industry demands.
+• Contributing as a team member in development projects.
+• Participating in code reviews and providing constructive feedback to improve code quality.
+• Collaborating with the backend team to integrate the application with the server-side.''',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,
                             height: 1.5,
                           ),
-                          textAlign: TextAlign.justify,
                         ),
                       ],
                     ),
@@ -283,14 +282,13 @@ class _CvPageState extends State<CvPage> {
                         // DESCRIPTION
                         const Text(
                           '''
-          • Graduated with a GPA of 3.78.
-          • Completed a thesis on the development of a mobile application for the presence QR Code UMKT.''',
+• Graduated with a GPA of 3.78.
+• Completed a thesis on the development of a mobile application for the presence QR Code UMKT.''',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,
                             height: 1.5,
                           ),
-                          textAlign: TextAlign.justify,
                         ),
                         const SizedBox(height: 8),
                       ],
@@ -336,20 +334,19 @@ class _CvPageState extends State<CvPage> {
                         // SKILLS
                         Text(
                           '''
-          • Flutter
-          • Android Native
-          • Solid Principles
-          • Dart, Kotlin
-          • Clean Architecture
-          • Google Maps API
-          • Firebase (FCM, Firestore, Firebase Storage, Remote Config, Auth, Crashlytics)
-          • Dependency Injection''',
+• Flutter
+• Android Native
+• Solid Principles
+• Dart, Kotlin
+• Clean Architecture
+• Google Maps API
+• Firebase (FCM, Firestore, Firebase Storage, Remote Config, Auth, Crashlytics)
+• Dependency Injection''',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,
                             height: 1.5,
                           ),
-                          textAlign: TextAlign.justify,
                         ),
                       ],
                     ),
@@ -384,20 +381,19 @@ class _CvPageState extends State<CvPage> {
                         // SKILLS
                         Text(
                           '''
-          •	Flutter SDK
-          •	GetX (Router,Local Storage, Localization, State Management, Etc.)
-          •	State Management : Blocs, Provider, GetX
-          •	Local Database : HIVE, Floor, ObjectBox
-          •	Depedencies Injection : Get_It
-          •	Networking: DIO, HTTP
-          •	Location Service, Maps, Camera, Scanning QR Code
-          •	AppLink & DeepLink (Android/IOS)''',
+•	Flutter SDK
+•	GetX (Router,Local Storage, Localization, State Management, Etc.)
+•	State Management : Blocs, Provider, GetX
+•	Local Database : HIVE, Floor, ObjectBox
+•	Depedencies Injection : Get_It
+•	Networking: DIO, HTTP
+•	Location Service, Maps, Camera, Scanning QR Code
+•	AppLink & DeepLink (Android/IOS)''',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,
                             height: 1.5,
                           ),
-                          textAlign: TextAlign.justify,
                         ),
                       ],
                     ),
@@ -432,19 +428,18 @@ class _CvPageState extends State<CvPage> {
                         // SKILLS
                         Text(
                           '''
-          •	Android SDK
-          •	LiveData, Flow, Coroutines
-          •	Local Database: Room, SQLite
-          •	MVC/MVVM Architecture
-          •	Local Key Storage: SharePref, DataStore
-          •	Networking: Retrofit, OkHTTP
-          •	Depedencies Injection : Dagger-Hilt, Koin''',
+•	Android SDK
+•	LiveData, Flow, Coroutines
+•	Local Database: Room, SQLite
+•	MVC/MVVM Architecture
+•	Local Key Storage: SharePref, DataStore
+•	Networking: Retrofit, OkHTTP
+•	Depedencies Injection : Dagger-Hilt, Koin''',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,
                             height: 1.5,
                           ),
-                          textAlign: TextAlign.justify,
                         ),
                       ],
                     ),
@@ -494,7 +489,6 @@ class _CvPageState extends State<CvPage> {
                             fontSize: 16,
                             height: 1.5,
                           ),
-                          textAlign: TextAlign.justify,
                         ),
                         SizedBox(height: 16),
                         Text(
@@ -514,7 +508,6 @@ class _CvPageState extends State<CvPage> {
                             fontSize: 16,
                             height: 1.5,
                           ),
-                          textAlign: TextAlign.justify,
                         ),
                       ],
                     ),
@@ -665,7 +658,6 @@ class _CvPageState extends State<CvPage> {
                         fontSize: 16,
                         height: 1.5,
                       ),
-                      textAlign: TextAlign.justify,
                     ),
                   ],
                 ),
@@ -768,7 +760,6 @@ class _CvPageState extends State<CvPage> {
                         fontSize: 16,
                         height: 1.5,
                       ),
-                      textAlign: TextAlign.justify,
                     ),
                     const SizedBox(height: 8),
                   ],
@@ -828,7 +819,6 @@ Remote Config, Auth, Crashlytics)
                         fontSize: 16,
                         height: 1.5,
                       ),
-                      textAlign: TextAlign.justify,
                     ),
                   ],
                 ),
@@ -876,7 +866,6 @@ Remote Config, Auth, Crashlytics)
                         fontSize: 16,
                         height: 1.5,
                       ),
-                      textAlign: TextAlign.justify,
                     ),
                   ],
                 ),
@@ -923,7 +912,6 @@ Remote Config, Auth, Crashlytics)
                         fontSize: 16,
                         height: 1.5,
                       ),
-                      textAlign: TextAlign.justify,
                     ),
                   ],
                 ),
@@ -973,7 +961,6 @@ Remote Config, Auth, Crashlytics)
                         fontSize: 16,
                         height: 1.5,
                       ),
-                      textAlign: TextAlign.justify,
                     ),
                     SizedBox(height: 16),
                     Text(
@@ -993,7 +980,6 @@ Remote Config, Auth, Crashlytics)
                         fontSize: 16,
                         height: 1.5,
                       ),
-                      textAlign: TextAlign.justify,
                     ),
                   ],
                 ),

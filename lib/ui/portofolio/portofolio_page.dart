@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -214,7 +215,9 @@ class PortofolioPage extends StatelessWidget {
                     try {
                       await launchUrlString(appStoreLink);
                     } catch (e) {
-                      print(e);
+                      if (kDebugMode) {
+                        print(e);
+                      }
                     }
                   },
                   icon: const FaIcon(FontAwesomeIcons.appStore),
@@ -261,7 +264,9 @@ class PortofolioPage extends StatelessWidget {
                     try {
                       await launchUrlString(playStoreLink);
                     } catch (e) {
-                      print(e);
+                      if (kDebugMode) {
+                        print(e);
+                      }
                     }
                   },
                   icon: const FaIcon(FontAwesomeIcons.googlePlay),

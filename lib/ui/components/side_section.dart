@@ -68,11 +68,12 @@ class SideSection extends StatelessWidget {
                     const SizedBox(height: 16),
                     Flexible(
                       child: Text(
-                        "Flutter Mobile Developer / Android Developer",
+                        "Mobile Developer\nAndroid | Flutter",
                         style: GoogleFonts.roboto(
                           fontSize: 14,
                           color: Colors.white,
                         ),
+                        textAlign: TextAlign.center,
                       ),
                     ),
                     const SizedBox(height: 16),

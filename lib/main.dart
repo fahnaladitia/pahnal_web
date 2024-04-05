@@ -1,11 +1,15 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pahnal_web/ui/cv/cv_page.dart';
 import 'package:pahnal_web/ui/portofolio/portofolio_page.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 
 import 'ui/home/home_page.dart';
 
 void main() {
+  usePathUrlStrategy();
   runApp(const MyApp());
 }
 

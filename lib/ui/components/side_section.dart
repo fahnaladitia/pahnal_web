@@ -278,6 +278,62 @@ class SideSection extends StatelessWidget {
                 icon: const FaIcon(FontAwesomeIcons.briefcase),
                 label: const Text("Portofolio"),
               ),
+              const SizedBox(width: 24),
+              ElevatedButton.icon(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(
+                    currentIndex == 3 ? Colors.white.withOpacity(0.5) : Colors.transparent,
+                  ),
+                  elevation: MaterialStateProperty.resolveWith((states) {
+                    if (states.contains(MaterialState.hovered)) {
+                      return 10;
+                    }
+
+                    return 0;
+                  }),
+                  shadowColor: MaterialStateProperty.resolveWith((states) {
+                    if (states.contains(MaterialState.hovered)) {
+                      return Colors.white.withOpacity(0.5);
+                    }
+
+                    return null;
+                  }),
+                  overlayColor: MaterialStateProperty.resolveWith((states) {
+                    if (states.contains(MaterialState.hovered)) {
+                      return Colors.white.withOpacity(0.5);
+                    }
+
+                    return null;
+                  }),
+                  foregroundColor: MaterialStateProperty.all(Colors.white),
+                  padding: MaterialStateProperty.all(
+                    const EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 20,
+                    ),
+                  ),
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                      side: const BorderSide(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  textStyle: MaterialStateProperty.all(
+                    const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  iconSize: MaterialStateProperty.all(16),
+                ),
+                onPressed: () {
+                  context.go("/scratch");
+                },
+                icon: const FaIcon(FontAwesomeIcons.code),
+                label: const Text("scratch"),
+              ),
             ],
           ),
           const SizedBox(height: 16),

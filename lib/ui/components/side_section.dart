@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:universal_html/html.dart' as html;
 import 'dart:math';
 
@@ -134,9 +136,9 @@ class SideSection extends StatelessWidget {
                     // BUTTON FOR DOWNLOAD CV
                     ElevatedButton(
                       onPressed: () {
-                        html.AnchorElement anchorElement = html.AnchorElement(href: 'assets/files/cv.pdf');
-                        anchorElement.download = 'pahnal_cv.pdf';
-                        anchorElement.click();
+                        html.AnchorElement(href: "assets/files/cv1.pdf")
+                          ..setAttribute("download", "pahnal.pdf")
+                          ..click();
                       },
                       style: ElevatedButton.styleFrom(
                         foregroundColor: Colors.white,

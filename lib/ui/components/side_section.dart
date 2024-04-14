@@ -133,12 +133,13 @@ class SideSection extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 16),
-                    // BUTTON FOR DOWNLOAD CV
+                    // BUTTON FOR OPEN CV
                     ElevatedButton(
                       onPressed: () {
-                        html.AnchorElement(href: "assets/files/cv1.pdf")
-                          ..setAttribute("download", "pahnal.pdf")
-                          ..click();
+                        const urlGoogleDrive =
+                            "https://drive.google.com/file/d/1kUT8Cj97EsLbdfjtbCy_Rn5Y8v0gAcn4/view?usp=sharing";
+
+                        html.window.open(urlGoogleDrive, "cv");
                       },
                       style: ElevatedButton.styleFrom(
                         foregroundColor: Colors.white,
@@ -154,7 +155,7 @@ class SideSection extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(8),
                         child: Text(
-                          "Download CV",
+                          "OPEN CV",
                           style: GoogleFonts.roboto(
                             fontSize: 16,
                             color: Colors.white,

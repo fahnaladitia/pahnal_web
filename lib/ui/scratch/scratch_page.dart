@@ -126,6 +126,21 @@ class ScratchPage extends StatelessWidget {
                         'assets/images/weather_forecasts_gallery_4.PNG',
                       ],
                     ),
+                    const SizedBox(height: 24),
+                    DisplayAppItem(
+                      appLogo: Image.asset("assets/images/movie_icon.png"),
+                      framework: 'Android Native (Kotlin)',
+                      appName: 'Movie App - The Movie Database API (TMDB)',
+                      description:
+                          "Movie App is an application that provides information about movies. This application is made with Android Native (Kotlin) and uses The Movie Database API (TMDB). You can see type of movie (popular movies,top rated movies, upcoming movies, now playing movies), detail movie, and search movie.",
+                      githubLink: "https://github.com/fahnaladitia/MovieApp",
+                      images: const [
+                        'assets/images/movie_screenshot_1.jpeg',
+                        'assets/images/movie_screenshot_2.jpeg',
+                        'assets/images/movie_screenshot_3.jpeg',
+                        'assets/images/movie_screenshot_4.jpeg',
+                      ],
+                    ),
                   ],
                 ),
               ),

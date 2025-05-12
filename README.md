@@ -9,7 +9,7 @@ This is a portfolio website that showcases my projects, skills, and contact info
 - Responsive design
 - Animated page transitions
 - Project showcase (Portfolio)
-- Personal Project showcase (Scratch)
+- Personal App Creation
 - Skills showcase (CV)
 
 ## Technologies

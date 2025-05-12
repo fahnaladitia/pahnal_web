@@ -37,11 +37,20 @@ class ScratchPage extends StatelessWidget {
                 children: [
                   const SizedBox(height: 24),
                   const Text(
-                    'Scratch',
+                    'App Creation',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  // Subtitle
+                  const SizedBox(height: 8),
+                  const Text(
+                    'I have created several applications using various frameworks. Here are some of the applications I have created:',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
                     ),
                   ),
                   const SizedBox(height: 24),

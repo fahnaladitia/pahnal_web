@@ -92,7 +92,7 @@ final _router = GoRouter(
       },
     ),
     GoRoute(
-      path: '/scratch',
+      path: '/app-creation',
       pageBuilder: (context, state) {
         return CustomTransitionPage(
           key: state.pageKey,

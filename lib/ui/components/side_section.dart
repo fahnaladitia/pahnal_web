@@ -330,10 +330,10 @@ class SideSection extends StatelessWidget {
                   iconSize: MaterialStateProperty.all(16),
                 ),
                 onPressed: () {
-                  context.go("/scratch");
+                  context.go("/app-creation");
                 },
                 icon: const FaIcon(FontAwesomeIcons.code),
-                label: const Text("scratch"),
+                label: const Text("App Creation"),
               ),
             ],
           ),

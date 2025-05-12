@@ -107,8 +107,8 @@ class _DisplayAppItemState extends State<DisplayAppItem> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        // 'Flutter',
-                        widget.framework,
+                        // 'Swing - Golf Booking App',
+                        widget.appName,
                         style: const TextStyle(
                           color: Colors.white,
                           fontSize: 18,
@@ -116,8 +116,9 @@ class _DisplayAppItemState extends State<DisplayAppItem> {
                         ),
                       ),
                       Text(
-                        // 'Swing - Golf Booking App',
-                        widget.appName,
+                        // 'Flutter',
+                        widget.framework,
+
                         style: const TextStyle(
                           color: Colors.white,
                           fontSize: 14,

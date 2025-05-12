@@ -14,6 +14,68 @@ class PortofolioPage extends StatelessWidget {
     );
   }
 
+  List<Widget> _buildPortoList() {
+    return [
+      DisplayAppItem(
+        appLogo: Image.asset(
+          'assets/images/swing.png',
+          fit: BoxFit.cover,
+        ),
+        framework: 'Flutter',
+        appName: 'Swing - Golf Booking App',
+        description: "The Everything Golf App",
+        appStoreLink: 'https://apps.apple.com/us/app/swing-golf-booking-app/id1623054744',
+        playStoreLink: 'https://play.google.com/store/apps/details?id=app.getswing',
+        images: const [
+          'assets/images/swing_1.png',
+          'assets/images/swing_2.png',
+          'assets/images/swing_3.png',
+          'assets/images/swing_4.png',
+          'assets/images/swing_5.png',
+          'assets/images/swing_6.png',
+          'assets/images/swing_7.png',
+        ],
+      ),
+      const SizedBox(height: 24),
+      DisplayAppItem(
+        appLogo: Image.asset(
+          'assets/images/partners.png',
+          fit: BoxFit.cover,
+        ),
+        framework: 'Flutter',
+        appName: 'Swing For Partners',
+        description: "Manage & Track Everything Golf",
+        appStoreLink: 'https://apps.apple.com/id/app/swing-for-partners/id6566187091',
+        playStoreLink: 'https://play.google.com/store/apps/details?id=app.getswing.partners&hl=id',
+        images: const [
+          'assets/images/swing_for_partners_1.png',
+          'assets/images/swing_for_partners_2.png',
+          'assets/images/swing_for_partners_3.png',
+          'assets/images/swing_for_partners_4.png',
+        ],
+      ),
+      const SizedBox(height: 24),
+      DisplayAppItem(
+        appLogo: Image.asset(
+          'assets/images/bahaso.png',
+        ),
+        framework: 'Flutter',
+        appName: 'Bahaso Second Edition',
+        description: "Platform pendidikan bahasa online dan media sosial untuk pembelajaran bahasa",
+        playStoreLink: "https://play.google.com/store/apps/details?id=com.bahaso.bahasonesiamobile&hl=id",
+        images: const [
+          'assets/images/bahaso_1.png',
+          'assets/images/bahaso_2.png',
+          'assets/images/bahaso_3.png',
+          'assets/images/bahaso_4.png',
+          'assets/images/bahaso_5.png',
+          'assets/images/bahaso_6.png',
+        ],
+      ),
+      const SizedBox(height: 24),
+    ];
+  }
+
   Widget _websiteSize(BuildContext context) {
     return SizedBox(
       height: MediaQuery.of(context).size.height,
@@ -44,45 +106,7 @@ class PortofolioPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 24),
-                  DisplayAppItem(
-                    appLogo: Image.network(
-                        "https://cdn.discordapp.com/attachments/979229140215558166/1224375879363334144/swing.png?ex=661d43e5&is=660acee5&hm=e8c00ff91313343cb0e44bd729b1222a3e889b0d84219d41a7486006a3870249&"),
-                    framework: 'Flutter',
-                    appName: 'Swing - Golf Booking App',
-                    description:
-                        "Book driving on your favorite golf courses from your phone. Payment, confirmation, and history - all in one app.",
-                    appStoreLink: 'https://apps.apple.com/us/app/swing-golf-booking-app/id1623054744',
-                    playStoreLink: 'https://play.google.com/store/apps/details?id=app.getswing',
-                    images: const [
-                      'assets/images/swing_1.png',
-                      'assets/images/swing_2.png',
-                      'assets/images/swing_3.png',
-                      'assets/images/swing_4.png',
-                      'assets/images/swing_5.png',
-                      'assets/images/swing_6.png',
-                      'assets/images/swing_7.png',
-                    ],
-                  ),
-                  const SizedBox(height: 24),
-                  DisplayAppItem(
-                    // appLogo: const DecorationImage(
-                    //   image: AssetImage('images/presensi_umkt_logo.png'),
-                    // ),
-                    appLogo: Image.asset(
-                      'assets/images/presensi_umkt_logo.png',
-                    ),
-                    framework: 'Flutter',
-                    appName: 'Presensi UMKT - Attendance App',
-                    description:
-                        "Presensi UMKT is an application for students to attendance online/offline lectures. This application is integrated with the UMKT system. This application is made to make it easier for students to attend lectures and to make it easier for lecturers to take attendance. This application is made with Scan QR Code technology and Location Based.",
-                    images: const [
-                      'assets/images/presensi_umkt_1.jpeg',
-                      'assets/images/presensi_umkt_2.jpeg',
-                      'assets/images/presensi_umkt_3.jpeg',
-                      'assets/images/presensi_umkt_4.jpeg',
-                    ],
-                  ),
-                  const SizedBox(height: 24),
+                  ..._buildPortoList(),
                 ],
               ),
             ),
@@ -122,45 +146,7 @@ class PortofolioPage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 24),
-                    DisplayAppItem(
-                      appLogo: Image.network(
-                          "https://cdn.discordapp.com/attachments/979229140215558166/1224375879363334144/swing.png?ex=661d43e5&is=660acee5&hm=e8c00ff91313343cb0e44bd729b1222a3e889b0d84219d41a7486006a3870249&"),
-                      framework: 'Flutter',
-                      appName: 'Swing - Golf Booking App',
-                      description:
-                          "Book driving on your favorite golf courses from your phone. Payment, confirmation, and history - all in one app.",
-                      appStoreLink: 'https://apps.apple.com/us/app/swing-golf-booking-app/id1623054744',
-                      playStoreLink: 'https://play.google.com/store/apps/details?id=app.getswing',
-                      images: const [
-                        'assets/images/swing_1.png',
-                        'assets/images/swing_2.png',
-                        'assets/images/swing_3.png',
-                        'assets/images/swing_4.png',
-                        'assets/images/swing_5.png',
-                        'assets/images/swing_6.png',
-                        'assets/images/swing_7.png',
-                      ],
-                    ),
-                    const SizedBox(height: 24),
-                    DisplayAppItem(
-                      // appLogo: const DecorationImage(
-                      //   image: AssetImage('images/presensi_umkt_logo.png'),
-                      // ),
-                      appLogo: Image.asset(
-                        'assets/images/presensi_umkt_logo.png',
-                      ),
-                      framework: 'Flutter',
-                      appName: 'Presensi UMKT - Attendance App',
-                      description:
-                          "Presensi UMKT is an application for students to attendance online/offline lectures. This application is integrated with the UMKT system. This application is made to make it easier for students to attend lectures and to make it easier for lecturers to take attendance. This application is made with Scan QR Code technology and Location Based.",
-                      images: const [
-                        'assets/images/presensi_umkt_1.jpeg',
-                        'assets/images/presensi_umkt_2.jpeg',
-                        'assets/images/presensi_umkt_3.jpeg',
-                        'assets/images/presensi_umkt_4.jpeg',
-                      ],
-                    ),
-                    const SizedBox(height: 24),
+                    ..._buildPortoList(),
                   ],
                 ),
               ),

@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:universal_html/html.dart' as html;
 import 'dart:math';
 
@@ -70,7 +68,7 @@ class SideSection extends StatelessWidget {
                     const SizedBox(height: 16),
                     Flexible(
                       child: Text(
-                        "Mobile Developer\nAndroid | Flutter",
+                        "Mobile Developer (Flutter)",
                         style: GoogleFonts.roboto(
                           fontSize: 14,
                           color: Colors.white,
@@ -107,17 +105,17 @@ class SideSection extends StatelessWidget {
                           ),
                         ),
                         // INSTAGRAM
-                        const SizedBox(width: 16),
-                        IconButton(
-                          onPressed: () {
-                            launchUrlString("https://www.instagram.com/fahnaladitia07/");
-                          },
-                          color: Colors.white,
-                          hoverColor: Colors.blueAccent,
-                          icon: const FaIcon(
-                            FontAwesomeIcons.instagram,
-                          ),
-                        ),
+                        // const SizedBox(width: 16),
+                        // IconButton(
+                        //   onPressed: () {
+                        //     launchUrlString("https://www.instagram.com/fahnaladitia07/");
+                        //   },
+                        //   color: Colors.white,
+                        //   hoverColor: Colors.blueAccent,
+                        //   icon: const FaIcon(
+                        //     FontAwesomeIcons.instagram,
+                        //   ),
+                        // ),
                         // EMAIL
                         const SizedBox(width: 16),
                         IconButton(
@@ -137,7 +135,7 @@ class SideSection extends StatelessWidget {
                     ElevatedButton(
                       onPressed: () {
                         const urlGoogleDrive =
-                            "https://drive.google.com/file/d/1kUT8Cj97EsLbdfjtbCy_Rn5Y8v0gAcn4/view?usp=sharing";
+                            "https://drive.google.com/file/d/1sOYYY1OHhx3fb0NO-Q_LdDvOXYI1psT7/view?usp=sharing";
 
                         html.window.open(urlGoogleDrive, "cv");
                       },

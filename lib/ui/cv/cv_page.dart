@@ -10,35 +10,7 @@ class CvPage extends StatefulWidget {
 }
 
 class _CvPageState extends State<CvPage> {
-  final Duration swingWorkingDuration = DateTime(2022, 5).difference(DateTime.now().toLocal()).abs();
-
-  String get swingWorkingDurationString {
-    final years = swingWorkingDuration.inDays ~/ 365;
-    final months = (swingWorkingDuration.inDays % 365) ~/ 30;
-
-    final stringBuilder = StringBuffer();
-
-    stringBuilder.write('(');
-
-    if (years > 1) {
-      stringBuilder.write('$years years ');
-    }
-    if (years == 1) {
-      stringBuilder.write('$years year ');
-    }
-
-    if (months > 1) {
-      stringBuilder.write('$months month');
-    }
-
-    if (months == 1) {
-      stringBuilder.write('$months month');
-    }
-
-    stringBuilder.write(')');
-
-    return stringBuilder.toString();
-  }
+  final Duration swingWorkingDuration = DateTime(2022, 5).difference(DateTime(2025, 06, 01)).abs();
 
   @override
   Widget build(BuildContext context) {
@@ -111,8 +83,7 @@ class _CvPageState extends State<CvPage> {
                           height: 80,
                           decoration: const BoxDecoration(
                             image: DecorationImage(
-                              image: NetworkImage(
-                                  "https://cdn.discordapp.com/attachments/979229140215558166/1224375879363334144/swing.png?ex=661d43e5&is=660acee5&hm=e8c00ff91313343cb0e44bd729b1222a3e889b0d84219d41a7486006a3870249&"),
+                              image: AssetImage('assets/images/swing.png'),
                               fit: BoxFit.contain,
                             ),
                           ),
@@ -122,6 +93,99 @@ class _CvPageState extends State<CvPage> {
                         const Text.rich(
                           TextSpan(
                             text: 'Swing',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            children: [
+                              TextSpan(
+                                text: ' - Tangerang, Indonesia',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.normal,
+                                ),
+                              ),
+                            ],
+                          ),
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        // DATE
+                        const Text(
+                          "May 2022 - June 2025",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                          ),
+                        ),
+                        const SizedBox(height: 24),
+                        // DESCRIPTION
+                        const Text(
+                          '''
+•	Developed and maintained two mobile applications using Flutter SDK:
+  -	Swing App – for golf players, offering features like Tee Time booking, Driving Range, Tournament registration, and an integrated Marketplace.
+  -	Swing for Partners – for golf course partners/staff to manage bookings, schedules, and monitor tournament activities.
+•	Collaborated closely with UI/UX designers, backend engineers, and product teams to deliver a seamless, consistent, and responsive user experience across both apps.
+•	Refactored legacy code for improved modularity, readability, and scalability, supporting long-term maintenance and feature expansion.
+•	Actively conducted testing, debugging, and performance optimization to ensure smooth performance on various devices and platforms.
+•	Maintained alignment with Flutter best practices and continuously improved development workflows to stay ahead of industry standards.''',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            height: 1.5,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  // WORK EXPERIENCE ITEM
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.all(24),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(
+                        color: Colors.white,
+                        width: 2,
+                      ),
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        // WORK EXPERIENCE ITEM
+                        // TITLE
+                        Text(
+                          'Mobile Developer (Flutter)',
+                          style: GoogleFonts.roboto(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        // LOGO
+                        Container(
+                          width: 80,
+                          height: 80,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('assets/images/bahaso.png'),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        // COMPANY
+                        const Text.rich(
+                          TextSpan(
+                            text: 'Bahaso',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
@@ -144,26 +208,10 @@ class _CvPageState extends State<CvPage> {
                           ),
                         ),
                         const SizedBox(height: 8),
-
                         // DATE
-                        Text.rich(
-                          TextSpan(
-                              text: 'May 2022 - Present ',
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                              ),
-                              children: [
-                                TextSpan(
-                                  text: swingWorkingDurationString,
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                                ),
-                              ]),
-                          style: const TextStyle(
+                        const Text(
+                          "June 2024 - December 2024",
+                          style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,
                           ),
@@ -172,16 +220,11 @@ class _CvPageState extends State<CvPage> {
                         // DESCRIPTION
                         const Text(
                           '''
-• Designing, developing, and releasing the Swing application for Android and iOS platforms using Flutter SDK.
-• Implementing key features such as Tee Time booking and GPS integration for the driving range location for golf players.
-• Collaborating with the UI/UX team in developing an intuitive and engaging user interface.
-• Integrating a payment system to facilitate booking payments.
-• Optimizing the application's performance and responsiveness to provide a seamless user experience across various devices.
-• Conducting regular debugging, testing, and bug fixes to ensure application stability.
-• Staying up-to-date with the latest practices in Flutter development to meet evolving industry demands.
-• Contributing as a team member in development projects.
-• Participating in code reviews and providing constructive feedback to improve code quality.
-• Collaborating with the backend team to integrate the application with the server-side.''',
+•	Collaborated with Backend engineers, Lead Dev Team, and UI/UX Designers as part of a team to develop high-quality mobile applications using Flutter SDK.
+•	Contributed to the development of "Bahaso Second Edition", focusing on refactoring the code for efficiency, adding new features, and performing a redesign to create a more modern and user-friendly interface.
+•	Improved application performance through optimizations, ensuring smooth operation across various devices and platforms.
+•	Enhanced the modularity, readability, and scalability of the code to support long-term maintenance and future feature expansion.
+•	Contributed to maintaining code quality through testing, debugging, and bug fixing, ensuring the stability and responsiveness of the application.''',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,
@@ -551,6 +594,8 @@ class _CvPageState extends State<CvPage> {
               ),
               const SizedBox(height: 24),
               // WORK EXPERIENCE LIST
+
+              // WORK EXPERIENCE ITEM
               Container(
                 width: double.infinity,
                 padding: const EdgeInsets.all(24),
@@ -582,8 +627,7 @@ class _CvPageState extends State<CvPage> {
                       height: 80,
                       decoration: const BoxDecoration(
                         image: DecorationImage(
-                          image: NetworkImage(
-                              "https://cdn.discordapp.com/attachments/979229140215558166/1224375879363334144/swing.png?ex=661d43e5&is=660acee5&hm=e8c00ff91313343cb0e44bd729b1222a3e889b0d84219d41a7486006a3870249&"),
+                          image: AssetImage('assets/images/swing.png'),
                           fit: BoxFit.contain,
                         ),
                       ),
@@ -593,6 +637,98 @@ class _CvPageState extends State<CvPage> {
                     const Text.rich(
                       TextSpan(
                         text: 'Swing',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        children: [
+                          TextSpan(
+                            text: ' - Tangerang, Indonesia',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                        ],
+                      ),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 24,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+
+                    // DATE
+                    const Text(
+                      "May 2022 - June 2025",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                    ),
+                    const SizedBox(height: 24),
+                    // DESCRIPTION
+                    const Text(
+                      '''
+•	Developed and maintained two mobile applications using Flutter SDK:
+  -	Swing App – for golf players, offering features like Tee Time booking, Driving Range, Tournament registration, and an integrated Marketplace.
+  -	Swing for Partners – for golf course partners/staff to manage bookings, schedules, and monitor tournament activities.
+•	Collaborated closely with UI/UX designers, backend engineers, and product teams to deliver a seamless, consistent, and responsive user experience across both apps.
+•	Refactored legacy code for improved modularity, readability, and scalability, supporting long-term maintenance and feature expansion.
+•	Actively conducted testing, debugging, and performance optimization to ensure smooth performance on various devices and platforms.
+•	Maintained alignment with Flutter best practices and continuously improved development workflows to stay ahead of industry standards.''',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        height: 1.5,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(24),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(
+                    color: Colors.white,
+                    width: 2,
+                  ),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // WORK EXPERIENCE ITEM
+                    // TITLE
+                    Text(
+                      'Mobile Developer (Flutter)',
+                      style: GoogleFonts.roboto(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    // LOGO
+                    Container(
+                      width: 80,
+                      height: 80,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/bahaso.png'),
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    // COMPANY
+                    const Text.rich(
+                      TextSpan(
+                        text: 'Bahaso',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16,
@@ -617,24 +753,9 @@ class _CvPageState extends State<CvPage> {
                     const SizedBox(height: 8),
 
                     // DATE
-                    Text.rich(
-                      TextSpan(
-                          text: 'May 2022 - Present ',
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                          ),
-                          children: [
-                            TextSpan(
-                              text: swingWorkingDurationString,
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontWeight: FontWeight.normal,
-                              ),
-                            ),
-                          ]),
-                      style: const TextStyle(
+                    const Text(
+                      "June 2024 - December 2024",
+                      style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,
                       ),
@@ -643,16 +764,11 @@ class _CvPageState extends State<CvPage> {
                     // DESCRIPTION
                     const Text(
                       '''
-• Designing, developing, and releasing the Swing application for Android and iOS platforms using Flutter SDK.
-• Implementing key features such as Tee Time booking and GPS integration for the driving range location for golf players.
-• Collaborating with the UI/UX team in developing an intuitive and engaging user interface.
-• Integrating a payment system to facilitate booking payments.
-• Optimizing the application's performance and responsiveness to provide a seamless user experience across various devices.
-• Conducting regular debugging, testing, and bug fixes to ensure application stability.
-• Staying up-to-date with the latest practices in Flutter development to meet evolving industry demands.
-• Contributing as a team member in development projects.
-• Participating in code reviews and providing constructive feedback to improve code quality.
-• Collaborating with the backend team to integrate the application with the server-side.''',
+•	Collaborated with Backend engineers, Lead Dev Team, and UI/UX Designers as part of a team to develop high-quality mobile applications using Flutter SDK.
+•	Contributed to the development of "Bahaso Second Edition", focusing on refactoring the code for efficiency, adding new features, and performing a redesign to create a more modern and user-friendly interface.
+•	Improved application performance through optimizations, ensuring smooth operation across various devices and platforms.
+•	Enhanced the modularity, readability, and scalability of the code to support long-term maintenance and future feature expansion.
+•	Contributed to maintaining code quality through testing, debugging, and bug fixing, ensuring the stability and responsiveness of the application.''',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,

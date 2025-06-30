@@ -167,8 +167,9 @@ class SideSection extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
-          Row(
-            mainAxisSize: MainAxisSize.min,
+          Wrap(
+            spacing: 8,
+            runSpacing: 16,
             children: [
               ElevatedButton.icon(
                 style: ButtonStyle(
@@ -223,7 +224,6 @@ class SideSection extends StatelessWidget {
                 icon: const FaIcon(FontAwesomeIcons.addressCard),
                 label: const Text("CV"),
               ),
-              const SizedBox(width: 24),
               ElevatedButton.icon(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
@@ -279,7 +279,6 @@ class SideSection extends StatelessWidget {
                 icon: const FaIcon(FontAwesomeIcons.briefcase),
                 label: const Text("Portofolio"),
               ),
-              const SizedBox(width: 24),
               ElevatedButton.icon(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
@@ -335,63 +334,117 @@ class SideSection extends StatelessWidget {
                 icon: const FaIcon(FontAwesomeIcons.code),
                 label: const Text("App Creation"),
               ),
-            ],
-          ),
-          const SizedBox(height: 16),
-          ElevatedButton.icon(
-            style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(
-                currentIndex == 0 ? Colors.white.withOpacity(0.5) : Colors.transparent,
-              ),
-              elevation: MaterialStateProperty.resolveWith((states) {
-                if (states.contains(MaterialState.hovered)) {
-                  return 10;
-                }
-
-                return 0;
-              }),
-              shadowColor: MaterialStateProperty.resolveWith((states) {
-                if (states.contains(MaterialState.hovered)) {
-                  return Colors.white.withOpacity(0.5);
-                }
-
-                return null;
-              }),
-              overlayColor: MaterialStateProperty.resolveWith((states) {
-                if (states.contains(MaterialState.hovered)) {
-                  return Colors.white.withOpacity(0.5);
-                }
-
-                return null;
-              }),
-              foregroundColor: MaterialStateProperty.all(Colors.white),
-              padding: MaterialStateProperty.all(
-                const EdgeInsets.symmetric(
-                  horizontal: 20,
-                  vertical: 20,
-                ),
-              ),
-              shape: MaterialStateProperty.all(
-                RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
-                  side: const BorderSide(
-                    color: Colors.white,
+              ElevatedButton.icon(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(
+                    currentIndex == 4 ? Colors.white.withOpacity(0.5) : Colors.transparent,
                   ),
+                  elevation: MaterialStateProperty.resolveWith((states) {
+                    if (states.contains(MaterialState.hovered)) {
+                      return 10;
+                    }
+
+                    return 0;
+                  }),
+                  shadowColor: MaterialStateProperty.resolveWith((states) {
+                    if (states.contains(MaterialState.hovered)) {
+                      return Colors.white.withOpacity(0.5);
+                    }
+
+                    return null;
+                  }),
+                  overlayColor: MaterialStateProperty.resolveWith((states) {
+                    if (states.contains(MaterialState.hovered)) {
+                      return Colors.white.withOpacity(0.5);
+                    }
+
+                    return null;
+                  }),
+                  foregroundColor: MaterialStateProperty.all(Colors.white),
+                  padding: MaterialStateProperty.all(
+                    const EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 20,
+                    ),
+                  ),
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                      side: const BorderSide(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  textStyle: MaterialStateProperty.all(
+                    const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  iconSize: MaterialStateProperty.all(16),
                 ),
+                onPressed: () {
+                  context.go("/templates");
+                },
+                icon: const FaIcon(FontAwesomeIcons.fileCode),
+                label: const Text("Templates"),
               ),
-              textStyle: MaterialStateProperty.all(
-                const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
+              ElevatedButton.icon(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(
+                    currentIndex == 0 ? Colors.white.withOpacity(0.5) : Colors.transparent,
+                  ),
+                  elevation: MaterialStateProperty.resolveWith((states) {
+                    if (states.contains(MaterialState.hovered)) {
+                      return 10;
+                    }
+
+                    return 0;
+                  }),
+                  shadowColor: MaterialStateProperty.resolveWith((states) {
+                    if (states.contains(MaterialState.hovered)) {
+                      return Colors.white.withOpacity(0.5);
+                    }
+
+                    return null;
+                  }),
+                  overlayColor: MaterialStateProperty.resolveWith((states) {
+                    if (states.contains(MaterialState.hovered)) {
+                      return Colors.white.withOpacity(0.5);
+                    }
+
+                    return null;
+                  }),
+                  foregroundColor: MaterialStateProperty.all(Colors.white),
+                  padding: MaterialStateProperty.all(
+                    const EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 20,
+                    ),
+                  ),
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                      side: const BorderSide(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  textStyle: MaterialStateProperty.all(
+                    const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  iconSize: MaterialStateProperty.all(16),
                 ),
+                onPressed: () {
+                  context.go("/");
+                },
+                icon: const FaIcon(FontAwesomeIcons.house),
+                label: const Text("Home"),
               ),
-              iconSize: MaterialStateProperty.all(16),
-            ),
-            onPressed: () {
-              context.go("/");
-            },
-            icon: const FaIcon(FontAwesomeIcons.house),
-            label: const Text("Home"),
+            ],
           ),
         ],
       ),

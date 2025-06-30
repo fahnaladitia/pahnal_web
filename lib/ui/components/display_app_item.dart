@@ -201,30 +201,31 @@ class _DisplayAppItemState extends State<DisplayAppItem> {
           ),
           const SizedBox(height: 16),
           // GALERY SWING - ROW
-          SizedBox(
-            height: 350,
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              // FROM Assets Image - Aspects Ratio 9:16
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: widget.images
-                    .map(
-                      (image) => Padding(
-                        padding: const EdgeInsets.only(right: 8),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.asset(
-                            image,
-                            fit: BoxFit.fill,
+          if (widget.images.isNotEmpty)
+            SizedBox(
+              height: 350,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                // FROM Assets Image - Aspects Ratio 9:16
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: widget.images
+                      .map(
+                        (image) => Padding(
+                          padding: const EdgeInsets.only(right: 8),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(8),
+                            child: Image.asset(
+                              image,
+                              fit: BoxFit.fill,
+                            ),
                           ),
                         ),
-                      ),
-                    )
-                    .toList(),
+                      )
+                      .toList(),
+                ),
               ),
             ),
-          ),
         ],
       ),
     );

@@ -6,6 +6,7 @@ import 'package:pahnal_web/ui/cv/cv_page.dart';
 import 'package:pahnal_web/ui/portofolio/portofolio_page.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:pahnal_web/ui/scratch/scratch_page.dart';
+import 'package:pahnal_web/ui/templates/templates_page.dart';
 
 import 'ui/home/home_page.dart';
 
@@ -97,6 +98,25 @@ final _router = GoRouter(
         return CustomTransitionPage(
           key: state.pageKey,
           child: const ScratchPage(),
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            return FadeTransition(
+              opacity: CurvedAnimation(
+                parent: animation,
+                curve: Curves.easeInOutCirc,
+                reverseCurve: Curves.easeInOutCirc,
+              ),
+              child: child,
+            );
+          },
+        );
+      },
+    ),
+    GoRoute(
+      path: '/templates',
+      pageBuilder: (context, state) {
+        return CustomTransitionPage(
+          key: state.pageKey,
+          child: const TemplatesPage(),
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             return FadeTransition(
               opacity: CurvedAnimation(
